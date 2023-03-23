@@ -1,0 +1,361 @@
+/* color scheme */
+:root {
+    --primary-color: rgb(34, 34, 34);
+    --secondary-color: hsl(0, 0%, 71%);
+    --bg-color: whitesmoke;
+    --input-color: whitesmoke;
+    --hover-color: whitesmoke;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+h5,
+p {
+    color: var(--primary-color);
+}
+
+h1 {
+    color: var(--input-color);
+}
+
+h2,
+h3 {
+    color: var(--secondary-color);
+}
+
+body {
+    padding-top: 60px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 1rem;
+    background-color: var(--bg-color);
+}
+
+/* footer */
+footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+#footerText {
+    color: var(--secondary-color);
+}
+
+/* nav bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    height: 60px;
+}
+
+.navbar-brand {
+    color: var(--secondary-color) !important;
+}
+
+.search-bar {
+    display: none;
+}
+
+.btn-outline-success {
+    background-color: transparent;
+    border-color: none;
+    color: var(--secondary-color);
+}
+
+.form-inline {
+    padding-right: 20px;
+}
+
+.navbarBtn {
+    border: none;
+    background-color: transparent;
+}
+
+.favouriteIcon,
+.searchIcon {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.favouriteIcon:hover,
+.searchIcon:hover {
+    background-color: transparent;
+    color: var(--hover-color);
+}
+
+.navbarBtn {
+    color: var(--secondary-color);
+}
+
+/* hero */
+#jumbotron {
+    background-image: url(/assets/images/rohan-gangopadhyay-heIaYq6A7tg-unsplash.jpg);
+    background-position: 30% 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#jumbotron .container {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-input,
+#location-input {
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    color: var(--primary-color);
+    background-color: var(--input-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.form-control {
+    font-size: 20px;
+}
+
+#search-button,
+#near-button,
+#clearAll {
+    appearance: none;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+#search-button,
+#clearAll {
+    margin-top: 10px;
+}
+
+#search-button:disabled,
+#near-button:disabled,
+#clearAll:disabled {
+    pointer-events: none;
+}
+
+#search-button:hover,
+#near-button:hover,
+#clearAll:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    border: solid var(--primary-color);
+}
+
+#search-button:active,
+#near-button:active,
+#clearAll:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.search-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* results */
+#results-page {
+    display: none
+}
+
+#map {
+    height: 100vh;
+}
+
+#cardList {
+    height: 100vh;
+}
+
+#aside>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.card-header {
+    padding: 0.6rem 1.25rem;
+    position: relative;
+    width: 100%;
+}
+
+.card-header i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.card-header {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0;
+    z-index: 1000;
+}
+
+.card-header .addFavouriteIcon {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    margin: 10px;
+    color: var(--primary-color);
+    z-index: 1000;
+}
+
+.addFavouriteIcon:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* favourites */
+#favouritesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    min-height: 100vh;
+}
+
+.favourites-card {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.favourites-card {
+    position: relative;
+}
+
+.favourites-card .fa-heart {
+    position: absolute;
+    top: 3%;
+    left: 85%;
+    margin: 10px;
+    color: var(--primary-color);
+    z-index: 1000;
+}
+
+.favourites-card .fa-heart:hover {
+    color: var(--secondary-color);
+}
+
+.clear-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Hiding Near me button until it is working */
+/* #near-button {
+    display: none;
+} */
+
+
+
+
+
+/* Media query to change height of sidebar so that it moves above the rest of the content once the device width hits this point */
+/* @media only screen and (max-width: 768px) {
+    .row {
+        flex-direction: row;
+    }
+
+    #clearAll {
+        margin: 20px;
+        justify-content: center;
+    }
+} */
